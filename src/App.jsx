@@ -1,0 +1,27 @@
+import React from 'react'
+import NavBar from "./Components/NavBar.jsx";
+import {Route, Routes, useLocation} from "react-router-dom";
+import Home from "./pages/Home.jsx";
+import {HostelService} from "./services/Hostels.service.js";
+import Hostels from "./pages/Hostels.jsx";
+
+const App = () => {
+
+    const isOwnerPath = useLocation().pathname.includes("owner")
+
+
+
+    return (
+        <div>
+            { !isOwnerPath && <NavBar/>}
+            <div className="min-h-[70vh]">
+                <Routes>
+                    <Route path='/' element={<Home/>} />
+                    <Route path='/hostels' element={<Hostels />} />
+                </Routes>
+            </div>
+        </div>
+    )
+}
+
+export default App

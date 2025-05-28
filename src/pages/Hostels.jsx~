@@ -17,7 +17,7 @@ const Hostels = (props) => {
 
     useEffect(() => {
         const fetchHostelsDetailsByLocation = async () => {
-            const response = await axios.get("http://localhost:3000/hostel",{
+            const response = await axios.get("https://hostelworld.onrender.com",{
                 params: {
                     city: city
                 }

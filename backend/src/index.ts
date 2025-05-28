@@ -17,11 +17,6 @@ app.use(cors({
 app.use(express.json());
 app.use(router);
 
-// ✅ Add root route for Render health check
-app.get('/', (req, res) => {
-  res.send('Welcome to the HostelWorld backend API');
-});
-
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
 });

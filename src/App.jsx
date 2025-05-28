@@ -2,7 +2,6 @@ import React from 'react'
 import NavBar from "./Components/NavBar.jsx";
 import {Route, Routes, useLocation} from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import {HostelService} from "./services/Hostels.service.js";
 import Hostels from "./pages/Hostels.jsx";
 import Hostel from "./pages/hostel.jsx";
 

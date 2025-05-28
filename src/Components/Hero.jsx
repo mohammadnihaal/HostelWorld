@@ -5,7 +5,6 @@ import {HostelService} from "../services/Hostels.service.js";
 import {useNavigate} from "react-router-dom";
 
 
-
 const Hero = () => {
     const [cities, setCities] = useState([]);
 
@@ -78,3 +77,4 @@ const Hero = () => {
     )
 }
 export default Hero
+

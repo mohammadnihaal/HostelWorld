@@ -8,19 +8,23 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-app.use(cors());
+
+app.use(cors({
+  origin: 'http://localhost:5173',
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(router);
 
-
-app.use(cors({
-    origin: 'http://localhost:5173',
-    credentials: true
-  }));
+// ✅ Add root route for Render health check
+app.get('/', (req, res) => {
+  res.send('Welcome to the HostelWorld backend API');
+});
 
 app.listen(PORT, () => {
-    console.log(`Server running at http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
 
 connectToMongoose();
+

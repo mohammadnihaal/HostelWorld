@@ -10,4 +10,7 @@ export class HostelService extends BaseService{
 
         return this.get(this.url+'/cities', filterData);
     }
+    static getHostelData(id: string){
+        return this.get(this.url+'/'+id);
+    }
 }

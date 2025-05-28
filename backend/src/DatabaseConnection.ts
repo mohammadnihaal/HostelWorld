@@ -1,7 +1,7 @@
 import { Response } from "express";
 const mongoose = require('mongoose');
 
-const mongoURL = process.env.MONGO_URL || 'mongodb://localhost:27017/';
+const mongoURL = process.env.MONGO_URL || 'mongodb+srv://Nihaal:Nihaal@hostelworld.wyvh18v.mongodb.net/';
 
 export function connectToMongoose() {
     mongoose.connect(mongoURL, { dbName: 'HostelWorld' })
